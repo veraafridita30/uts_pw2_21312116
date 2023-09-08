@@ -31,7 +31,7 @@
 </tr>
 </thead>
 <tbody>
-    @forelse ($cast as $key => $item)
+    @forelse ($peran as $key => $item)
     <tr>
         <td>{{$key + 1}}</td>
         <td>{{$item->film}}</td>

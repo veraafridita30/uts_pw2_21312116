@@ -16,7 +16,7 @@ class PeranController extends Controller
      */
     public function index()
     {
-        $film = Peran::all();
+        $peran = Peran::all();
         return view('peran.index',compact('peran'));
     }
 
@@ -28,7 +28,7 @@ class PeranController extends Controller
     public function create()
     {
         //
-    
+        return view('Peran.create');
     }
 
     /**
@@ -83,7 +83,7 @@ class PeranController extends Controller
      */
     public function edit($id)
     {
-        $film = Peran::where('id',$id)->first();
+        $peran = Peran::where('id',$id)->first();
 
         return view('peran.edit', compact('peran'));
     }
@@ -133,7 +133,7 @@ class PeranController extends Controller
     public function destroy($id)
     {
         $peran = Peran::find($id);
-        $hapus= $film ->delete();
+        $hapus= $peran ->delete();
 
 
         Alert::success('success', 'data berhasil di hapus');
